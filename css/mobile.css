@@ -1,0 +1,14 @@
+body{
+    background-color:   #dbdcdd;
+}
+
+.home{
+   text-align: center;
+   display: block;
+ 
+}
+
+h1{
+    text-align: center;
+    font-family:unset;
+}
