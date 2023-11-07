@@ -8,43 +8,192 @@ body{
 
 
 /*Footer e NavBar*/
-footer{
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
+.wrapper .nav {
     
+  display: flex;
+  background-color: #fff;
+  height: 60px;
+  max-height: 60px;
+  color: #4c4c4c;
+  transition: all 0.35s ease;
+  border-top: 1px #dedede solid;
+
 }
-.button-container {
-    display: flex;
-    background-color: gray;
-    width: 100%;
-    height: 70px;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 10px;
-   
-  }
-  
-  .button {
-    outline: 0 !important;
-    border: 0 !important;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    transition: all ease-in-out 0.3s;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    transform: translateY(-3px);
-  }
-  
-  .icon {
-    font-size: 20px;
-  }
+
+.wrapper .nav .logo-menu {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+
+}
+
+.wrapper .nav .logo-menu .mob-menu {
+display: none;
+}
+
+.wrapper .nav .logo-menu .mob-menu .menu {
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 30px;
+width: 36px;
+position: relative;
+cursor: pointer;
+transition: width 0.3s ease;
+}
+
+.wrapper .nav .logo-menu .mob-menu .menu span {
+
+display: inline-block;
+width: 100%;
+height: 2px;
+background-color: currentColor;
+transition: transform 0.4s ease, opacity 0.3s ease, transform-origin 0.3s ease;
+transform-origin: left;
+}
+
+.wrapper .nav .logo-menu .mob-menu .hamburger1.active {
+width: 40px;
+}
+
+.wrapper .nav .logo-menu .mob-menu .hamburger1.active span:nth-of-type(1) {
+transform: rotate(-45deg);
+transform-origin: right;
+}
+.wrapper .nav .logo-menu .mob-menu .hamburger1.active span:nth-of-type(2) {
+opacity: 0;
+}
+.wrapper .nav .logo-menu .mob-menu .hamburger1.active span:nth-of-type(3) {
+transform: rotate(45deg);
+transform-origin: right;
+}
+
+
+.wrapper .nav .nav-list-container {
+
+width: 100%;
+}
+
+.wrapper .nav .navbar {
+
+height: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+flex: 1 1 auto;
+
+}
+
+.wrapper .nav .navbar .nav-list, .wrapper .nav .navbar .nav-actions {
+
+display: flex;
+align-items: center;
+list-style: none;
+margin: 0;
+padding: 0.25rem 0;
+gap: 0.25rem;
+
+}
+
+.wrapper .nav .navbar .nav-list li a, .wrapper .nav .navbar .nav-actions li a {
+
+display: inline-flex;
+align-items: center;
+padding: 0.5rem 0.75rem;
+text-decoration: none;
+color: inherit;
+border-radius: 0.25rem;
+
+}
+
+.wrapper .nav .navbar .nav-list li a:hover, .wrapper .nav .navbar .nav-actions li a:hover {
+
+background-color: #007cff;
+color: #fff;
+
+}
+
+.wrapper .nav .navbar .nav-actions {
+
+background: transparent;
+
+}
+
+.wrapper .nav .navbar .nav-actions li a {
+
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6;
+  font-size: 1.1em;
+
+}
+
+@media (max-width: 768px) {
+
+.wrapper .nav {
+  display: block;
+  height: auto;
+  max-height: unset;
+}
+
+.wrapper .nav .logo-menu {
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wrapper .nav .logo-menu .mob-menu {
+  display: block;
+}
+
+.wrapper .nav .navbar {
+  flex-direction: column;
+  align-items: unset;
+  justify-content: unset;
+}
+
+.wrapper .nav .navbar .nav-list, .wrapper .nav .navbar .nav-actions {
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrapper .nav .navbar .nav-list li, .wrapper .nav .navbar .nav-actions li {
+  margin: 0.25rem 0;
+  flex: 1 1 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper .nav .navbar .nav-list li a, .wrapper .custom-nav .navbar .nav-actions li a {
+  display: block;
+}
+
+.wrapper .nav .navbar .nav-actions {
+  flex-direction: row;
+  justify-content: space-between;
+  border: unset;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0.25rem 0;
+}
+
+.wrapper .nav .navbar .nav-actions li a {
+  display: flex;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+}
+
+.wrapper .container {
+
+height: calc(100vh-60px);
+padding: 50px;
+text-align: center;
+
+}
